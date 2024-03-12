@@ -86,6 +86,9 @@ body,html{
 .grid-item {
     padding: 10px;
     margin: 10px;
+}
+
+.grid-container :hover  {
     background-color: #1F2937;
     border-radius: 10px;
 }
