@@ -86,15 +86,25 @@ body,html{
 .grid-item {
     padding: 10px;
     margin: 10px;
-}
-
-.grid-container :hover  {
-    background-color: #1F2937;
-    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; /* Optional: Center-align text as well */
 }
 
 /* Style for images */
 .grid-item img {
     max-width: 100%;
     height: auto;
+}
+
+.project-image {
+    width: 161px; /* Set the width as per your requirement */
+    height: auto; /* Maintain aspect ratio */
+}
+
+h4{
+    padding: 0;
+    padding-top: 20px;
+    margin: 0;
 }
