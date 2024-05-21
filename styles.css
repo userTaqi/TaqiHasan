@@ -1,91 +1,184 @@
-body,html{
-    padding: 0;
-    margin: 0;
-    background: #0D1528;
-    height: 100%;
-    color: white;
+body {
+  padding: 0px;
+  margin: 0px;
+  background-color: black;
+
+  -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE 10+ */
+    user-select: none; /* Standard syntax */
 }
 
-.indexBody{
-    overflow: hidden;
+@font-face {
+  font-family: "RetroFont"; /* Name of your font family */
+  src: url("fonts/Monoton-Regular.ttf") format("truetype"); /* Specify the path to your font files */
+  /* Add more src lines for other font formats if available */
+  /* Additional font properties as needed */
 }
 
-/* Style for the navigation bar */
-.navbar {
-    overflow: hidden;
-    background-color: #1F2937;
-    font-size: larger;
+.top-bar {
+  background-color: #445a65;
+  display: flex;
+  justify-content: space-between; /* Pushes the divs to opposite ends */
+  padding: 10px;
+  border-bottom: 2px solid #2df7ed;
 }
 
-  /* Style for the navigation bar links */
-  .navbar a {
-    float: left;
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 20px;
+.left-nav {
+  display: flex;
+  justify-content: center; /* Horizontally center the content */
+  align-items: center; /* Vertically center the content */
+  padding-left: 10px;
+}
+
+.right-nav {
+  display: flex;
+  justify-content: center; /* Horizontally center the content */
+  align-items: center; /* Vertically center the content */
+  color: #2df7ed;
+  font-weight: 900;
+  font-size: 14px;
+  padding-right: 10px;
+}
+
+.logos{
+  display: flex;
+  justify-content: center; /* Horizontally center the content */
+  align-items: center; /* Vertically center the content */
+  flex-direction: column;
+  margin-left: 20px;
+  
+}
+
+#resume{
+    padding-top: 5px;
+}
+
+.resume{
+    padding-top: 1px;
+}
+
+
+p {
+  margin: 0px;
+  padding: 0px;
+}
+
+
+
+.button{
     text-decoration: none;
+    font-size: 20px;
+    color: #2df7ed;
+    font-weight: 900;
+    font-family: monospace;
+    position: relative; /* Needed for absolute positioning of pseudo-element */
+  }
+  
+  .button::after {
+    content: ''; /* Required for pseudo-elements */
+    position: absolute; /* Position relative to the anchor tag */
+    top: 100%; /* Position underneath the text */
+    left: 50%; /* Start from the middle */
+    transform: translateX(-50%); /* Center the line horizontally */
+    width: 0; /* Initially no width */
+    height: 2px; /* Height of the line */
+    background-color: #2df7ed; /* Color of the line */
+    transition: width 0.3s ease; /* Transition effect for smooth animation */
+  }
+  
+  .button:hover::after {
+    width: 100%; /* Extend the line to the right */
+    transition: width 0.3s ease; /* Transition effect for smooth animation */
+  }
+  
+
+button {
+  appearance: none;
+  border: none;
+  background: none;
+  outline: none;
+  /* Additional styles as needed */
 }
 
-  /* Change the color of links on hover */
-  .navbar a:hover {
-    background-color: #ddd;
-    color: black;
+.content {
+  text-align: center;
 }
 
-.selected-link{
-    background: #0D1528;
+#section1 {
+  background-image: url("images/cloud.jpg");
+  background-size: cover; /* Adjusts the background image to cover the entire container */
+  background-position: center; /* Centers the background image */
+  height: 100vh;
+  display: flex;
+  justify-content: center; /* Horizontally center the content */
+  align-items: center; /* Vertically center the content */
+  flex-direction: column; /* Change the flex direction to column */
+}
+  
+
+h1 {
+  font-size: 100px;
+  padding: 0;
+  margin: 0;
+  color: #2ef8f1;
+  font-family: "Monoton";
+  font-size: 100px;
+  padding-right: 5px;
+}
+h2 {
+  padding: 0;
+  margin: 0;
+  font-size: 50px;
+  color: #cf3890;
+  font-family: "Monoton";
+  font-size: 40px;
 }
 
-.container{
-    height: 100%;
-    /* Ensure it uses flexbox layout */
-    display: flex;
-    /* Arrange children side by side */
-    flex-direction: row;
+#section2 img {
+  border-radius: 100%;
+  border: 3px solid #2df7ed;
+  width: 20%;
 }
 
-.leftImage{
-    position: relative;
+#section2 {
+  background-color: #0F0F0F;
+  height: 100vh;
+  display: flex;
+  justify-content: center; /* Horizontally center the content */
+  align-items: center; /* Vertically center the content */
+  flex-direction: column;
+  color: white;
+}
+  
 
-    height: 100%;
-    width: 50%;
-    
+#section2 p{
+    font-size: 25px;
+    margin-left: 40px;
+    padding: 20px 50px;
+    text-align: left;
+    margin-top: 50px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.574);
+    border: 2px solid #2df7ed;
 }
 
-.rightText{
-    width: 40%;
-    display: flex;
-    justify-content: center; /* Horizontally center */
-    align-items: center; /* Vertically center */
-    flex-direction: column; /* Stack items vertically */
+#section3{
+  background-color: #0F0F0F;
 }
 
-.leftImage img{
-    width: 50vh;
-    height: 50vh;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    max-width: 100%;
-    max-height: 100%;
-    border-radius: 50%; /* Create a circular shape */
-}
-
-/* PROJECTS.HTML*/
 
 /* Style for the grid container */
 .grid-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 2 columns */
-    grid-template-rows: repeat(1, auto); /* 3 rows */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  grid-template-rows: repeat(1, auto); /* 3 rows */
+  color: white;
 }
 
 /* Style for each grid item */
 .grid-item {
     padding: 10px;
-    margin: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -94,7 +187,7 @@ body,html{
 
 /* Style for images */
 .grid-item img {
-    max-width: 100%;
+    max-width: 80%;
     height: auto;
 }
 
@@ -103,8 +196,19 @@ body,html{
     height: auto; /* Maintain aspect ratio */
 }
 
-h4{
-    padding: 0;
-    padding-top: 20px;
-    margin: 0;
+#section2 h2{
+  padding-bottom: 100px;
+}
+
+#section3 h2{
+  padding-bottom: 100px;
+}
+
+.grid-item h3{
+  color:#2df7ed;
+}
+
+.grid-item p{
+  margin-bottom:5vh;
+  font-size: larger;
 }
