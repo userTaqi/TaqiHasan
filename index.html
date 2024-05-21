@@ -1,26 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Monoton"
+      rel="stylesheet"
+    />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Navigation Bar</title>
+    <title>Taqi Hasan</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body class="indexBody">
-    <div class="navbar">
-      <a href="index.html" class="selected-link">Home</a>
-      <a href="projects.html">Projects</a>
-    </div>
-    <div class="container">
-      <div class="leftImage">
-        <img src="images/pfp.jpeg" alt="Description of the image" />
+  <body>
+    <div class="top-bar">
+      <div class="left-nav">
+        <button><a class="button" href="#section2">ABOUT</a></button>
+        <button><a class="button" href="#section3">PROJECTS</a></button>
+        <!-- <button><a class="button" href="#section4">CONTACT</a></button> -->
       </div>
-      <div class="rightText">
-        <h1>Hello, I'm Taqi Hasan</h1>
+      <div class="right-nav">
+        <div class="logos">
+          <a href="https://github.com/userTaqi" target="_blank">
+            <i class="fa fa-github" style="font-size: 38px; color: #cf3890"></i>
+          </a>
+          <p>GitHub</p>
+        </div>
+        <div class="logos">
+          <a href="https://www.linkedin.com/in/taqi-hasan-profile/" target="_blank">
+            <i
+              class="fa fa-linkedin-square"
+              style="font-size: 38px; color: #cf3890"
+            ></i>
+          </a>
+          <p>LinkedIn</p>
+        </div>
+        <div class="logos">
+          <a href="https://drive.google.com/file/d/1ba-rl45JuOkWoNVYprygEq-J0VlRzhEO/view" target="_blank">
+            <i
+              id="resume"
+              class="fa fa-file"
+              style="font-size: 33px; color: #cf3890"
+            ></i>
+          </a>
+          <p class="resume">Resume</p>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <div id="section1">
+        <!-- Content of section 1 goes here -->
+        <h1>TAQI ‎ ‎  HASAN</h1>
+        <h2>SOFTWARE ‎  DEVELOPER</h2>
+      </div>
+      <div id="section2">
+        <!-- Content of section 2 goes here -->
+        <h2>About Me</h2>
+        <img src="images/pfp.jpeg" alt="Description of the image" />
         <p>
-          Ambitious and analytical Computer Science student set to graduate in
-          July 2024, equipped with practical experience in machine learning, web development, and database systems. Demonstrated leadership in delivering innovative tech solutions. Dedicated to ongoing learning and catalysing positive change in dynamic tech environments.
+          - Ambitious and analytical Computer Science graduate from the
+          University of Derby. <br />
+          - Equipped with practical experience in machine learning, web
+          development, and database systems. <br />- Demonstrated leadership in
+          delivering innovative tech solutions.<br />
+          - Dedicated to ongoing learning and catalysing positive change in
+          dynamic tech environments.
         </p>
+      </div>
+      <div id="section3">
+        <!-- Content of section 3 goes here -->
+        <h2>Projects</h1>
+        <div class="grid-container">
+          <!-- Grid items -->
+          <div class="grid-item">
+            <h3>Medical Image Anonymization Tool</h3>
+            <img src="lapimages/gui.png" alt="Project" />
+            <h4>Keras-OCR - OpenCV - YOLOV8</h4>
+            <p>
+              • Leveraged machine learning libraries in Python such as Keras OCR
+              for optical character recognition tasks<br />• OpenCV for image
+              processing functionalities. <br />• Designed a user-friendly
+              interface using Tkinter.
+            </p>
+          </div>
+          <div class="grid-item">
+            <h3>Google Weather Extension</h3>
+            <img src="lapimages/weather.png" alt="Project" />
+            <h4>HTML - CSS - JAVASCRIPT</h4>
+            <p>
+              • Real-time weather information. Using WeatherAPI.com, it provides
+              current conditions in a clean, minimalist interface.
+            </p>
+          </div>
+          <div class="grid-item">
+            <h3>Tower Defense Game</h3>
+            <img src="lapimages/game.png" alt="Project" />
+            <h4>C#</h4>
+            <p>
+              • Tower defense game made using Unity. Defend from enemy attacks
+              by strategically placing defensive units.Plan carefully as enemies
+              become stronger with each wave.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </body>
